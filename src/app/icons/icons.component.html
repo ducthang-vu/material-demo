@@ -1,0 +1,48 @@
+<div>
+  <mat-icon color=primary>verified</mat-icon>
+  <mat-icon>savings</mat-icon>
+  <mat-icon>bookmark_border</mat-icon>
+</div>
+
+<div class="badge">
+  <div>
+    <span matBadge="{{notifications}}" [matBadgeHidden]="notifications === 0">Notifications</span>
+  </div>
+  <div>
+    <span matBadge=5 matBadgePosition="below before">Notifications</span>
+  </div>
+  <div>
+    <span matBadge=5 matBadgePosition="below after">Notifications</span>
+  </div>
+  <div>
+    <span matBadge=5 matBadgePosition="above before">Notifications</span>
+  </div>
+</div>
+
+<div class="badge">
+  <div>
+    <span matBadge=5 matBadgeSize="small">Notifications</span>
+  </div>
+  <div>
+    <span matBadge=5 matBadgeSize="medium" matBadgePosition="below before">Notifications</span>
+  </div>
+  <div>
+    <span matBadge=5 matBadgeSize="large" matBadgePosition="below after">Notifications</span>
+  </div>
+  <div>
+    <span matBadge=5 matBadgePosition="above before">Notifications</span>
+  </div>
+</div>
+
+
+<div class="badge">
+  <div>
+    <span matBadge=5 matBadgeColor="primary">Notifications</span>
+  </div>
+  <div>
+    <span matBadge=5 matBadgeColor="accent" matBadgePosition="below before">Notifications</span>
+  </div>
+  <div>
+    <span matBadge=5 matBadgeColor="warn" matBadgeOverlap=false matBadgePosition="below after">Notifications</span>
+  </div>
+</div>

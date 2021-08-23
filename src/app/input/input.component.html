@@ -1,0 +1,85 @@
+<mat-form-field floatLabel="never" appearance="outline" color="accent">
+  <mat-label>Name</mat-label>
+  <input matInput>
+</mat-form-field>
+
+<mat-form-field floatLabel="never" appearance="fill" color="warn">
+  <mat-label>Name</mat-label>
+  <input matInput required>
+</mat-form-field>
+
+<mat-form-field floatLabel="never" hideRequiredMarker>
+  <mat-label>Name</mat-label>
+  <input matInput required>
+</mat-form-field>
+
+<mat-form-field floatLabel="never" appearance="standard">
+  <mat-label>Name</mat-label>
+  <input matInput>
+  <mat-hint align="end">Min 5 chars</mat-hint>
+</mat-form-field>
+
+<div>
+  <mat-form-field>
+    <mat-label>Topic</mat-label>
+    <mat-select [(value)]="selectedValue">
+      <mat-option>None</mat-option>
+      <mat-optgroup label="web">
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value="react">React</mat-option>
+        <mat-option value="vue">Vue</mat-option>
+      </mat-optgroup>
+      <mat-optgroup label="mobile">
+        <mat-option value="ionic">Ionic</mat-option>
+        <mat-option value="react-native">React Native</mat-option>
+      </mat-optgroup>
+    </mat-select>
+  </mat-form-field>
+  <pre>{{ selectedValue | json }}</pre>
+
+  <mat-form-field>
+    <mat-label>Topic</mat-label>
+    <mat-select [(value)]="selectedValue" multiple>
+      <mat-option>None</mat-option>
+      <mat-optgroup label="web">
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value="react">React</mat-option>
+        <mat-option value="vue">Vue</mat-option>
+      </mat-optgroup>
+      <mat-optgroup label="mobile">
+        <mat-option value="ionic">Ionic</mat-option>
+        <mat-option value="react-native">React Native</mat-option>
+      </mat-optgroup>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+
+<form>
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl">
+
+    <!--    [displayWith] when option are object  -->
+    <mat-autocomplete #auto=matAutocomplete>
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">{{ option }}</mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+
+<div>
+  <mat-checkbox>
+    Subscribe
+  </mat-checkbox>
+</div>
+<div>
+  <mat-checkbox labelPosition="before" color="warn">
+    Subscribe
+  </mat-checkbox>
+</div>
+
+<mat-radio-group>
+  <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
+  <mat-radio-button value="react">React</mat-radio-button>
+  <mat-radio-button value="vue">Vue</mat-radio-button>
+</mat-radio-group>

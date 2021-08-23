@@ -1,0 +1,38 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Home</div>
+  <div class="navigation">
+    <a routerLink="/">Back</a>
+    <a routerLink="/typography">Typography</a>
+    <a routerLink="/icons">Icons</a>
+    <a routerLink="/progress-spinner">Spinners</a>
+    <a routerLink="/menu">Menu</a>
+    <a routerLink="/list">List</a>
+    <a routerLink="/grids">Grid</a>
+    <a routerLink="/expand">Expand</a>
+    <a routerLink="/cards">Card</a>
+    <a routerLink="/steppers">Stepper</a>
+    <a routerLink="/input">Input</a>
+    <a routerLink="/date">Date picker</a>
+    <a routerLink="/tooltip">Tooltip</a>
+    <a routerLink="/snackbar">Snackbar</a>
+    <a routerLink="/dialogs">Dialogs</a>
+    <a routerLink="/table">Data table</a>
+    <a routerLink="/scrolling">Scrolling</a>
+  </div>
+</mat-toolbar>
+
+<!-- Always hidden by default -->
+<mat-sidenav-container>
+  <!--  mode: over (default), push, side-->
+  <mat-sidenav #sidenav mode=side [(opened)]="open">Sidenav</mat-sidenav>
+  <mat-sidenav-content>
+    Main
+    <button (click)="open = !open">Toggle sidenav</button>
+    <button (click)="sidenav.open()">Open</button>
+    <button (click)="sidenav.close()">Close</button>
+    <button (click)="sidenav.toggle()">toggle</button>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

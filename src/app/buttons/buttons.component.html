@@ -1,0 +1,44 @@
+<div>
+  <button mat-button>Hello World</button>
+  <button mat-raised-button>raised</button>
+  <button mat-flat-button>flat</button>
+  <button mat-stroked-button>stroked</button>
+</div>
+
+<div>
+  <button mat-icon-button>Icon</button>
+  <button mat-fab>faf</button>
+  <button mat-mini-fab>mini fab</button>
+</div>
+
+<div>
+  <button color=primary disableRipple mat-raised-button>Primary</button>
+  <button color=accent mat-raised-button>Accent</button>
+  <button color=warn mat-raised-button>Warn</button>
+</div>
+
+<div>
+  <!--  add checked to make default checked value to be true -->
+  <mat-button-toggle #toggleBtn (change)="toggleValue($event)">Toggle</mat-button-toggle>
+  <pre>{{ toggleBtn.checked }}</pre>
+</div>
+
+
+<div>
+  <mat-button-toggle-group #toggleGroup=matButtonToggleGroup>
+    <mat-button-toggle value=Angular>Angular</mat-button-toggle>
+    <mat-button-toggle value=React>React</mat-button-toggle>
+    <mat-button-toggle value=Vue>Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  <pre>{{ toggleGroup.value }}</pre>
+</div>
+
+
+<div>
+  <mat-button-toggle-group #toggleGroup2=matButtonToggleGroup multiple>
+    <mat-button-toggle value=Angular>Angular</mat-button-toggle>
+    <mat-button-toggle value=React>React</mat-button-toggle>
+    <mat-button-toggle value=Vue>Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  <pre>{{ toggleGroup2.value | json }}</pre>
+</div>

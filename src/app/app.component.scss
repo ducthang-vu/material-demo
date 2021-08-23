@@ -1,0 +1,25 @@
+.navbar {
+  justify-content: space-between;
+
+  .navigation > * {
+    margin-right: 1rem;
+  }
+}
+
+mat-sidenav-container {
+  height: 100%;
+
+  mat-sidenav, mat-sidenav-content {
+    padding: 16px;
+  }
+
+  mat-sidenav {
+    background-color: chartreuse;
+  }
+}
+
+.content {
+  margin: 25px;
+  padding: 25px;
+  border: 1px red solid;
+}
